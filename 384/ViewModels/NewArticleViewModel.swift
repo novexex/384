@@ -4,6 +4,8 @@ import RealmSwift
 
 extension NewArticleView {
     final class ViewModel: ObservableObject {
+        let realm = try? Realm()
+        
         @Published var title = ""
         @Published var sportType: SportType?
         @Published var status: Status?
@@ -18,7 +20,7 @@ extension NewArticleView {
             !articleText.isEmpty
         }
         
-        func saveModel(with realm: Realm) {
+        func saveModel() {
             guard let sportType, let status else { return }
             
             let articleModel = ArticleModel(title: title,
@@ -27,8 +29,8 @@ extension NewArticleView {
                                             publisher: publisher,
                                             article: articleText)
             
-            try? realm.write {
-                realm.add(articleModel)
+            try? realm?.write {
+                realm?.add(articleModel)
             }
         }
     }

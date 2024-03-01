@@ -29,7 +29,8 @@ struct LoadingView: View {
             }
         }
         .navigate(to: viewModel.nextView,
-                  when: $viewModel.isLoadingEnded)
+                  when: $viewModel.isLoadingEnded,
+                  dismissCallback: viewModel.restart)
     }
 }
 

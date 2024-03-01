@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct BudgetTabView: View {
-    @StateObject private var viewModel = ViewModel()
+    private var viewModel = ViewModel()
     @State private var isIncome = false
     
     init() {
@@ -21,7 +21,7 @@ struct BudgetTabView: View {
                     viewModel.showSheet.toggle()
                 }
                 
-                Picker("", selection: $viewModel.selectedSection) {
+                Picker("", selection: viewModel.$selectedSection) {
                     Text("Income")
                         .tag(0)
                         .frame(height: 50)
@@ -43,7 +43,7 @@ struct BudgetTabView: View {
                 Spacer()
             }
         }
-        .sheet(isPresented: $viewModel.showSheet) {
+        .sheet(isPresented: viewModel.$showSheet) {
             NewBudgetView(isIncome: isIncome)
         }
     }
@@ -56,7 +56,7 @@ struct BudgetTabView: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         ForEach(viewModel.incomes) { incomes in
-                            BudgetCell(model: incomes)
+                            BudgetCell(_model: incomes)
                         }
                     }
                     .padding()
@@ -73,7 +73,7 @@ struct BudgetTabView: View {
                 ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         ForEach(viewModel.expenses) { expenses in
-                            BudgetCell(model: expenses)
+                            BudgetCell(_model: expenses)
                         }
                     }
                     .padding()

@@ -5,66 +5,117 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "0CF9084F-B10E-4927-BEC7-54CF7F18C2FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            symbolName = "-[Object dealloc]"
+            moduleName = "">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Sound">
+                  <ActionContent
+                     soundName = "Blow">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D2B92321-8B2D-4B26-B393-F9C0E1DA6559"
+            uuid = "DF5BBF3D-B251-46BE-A4A7-8F93E5C4B3D4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "384/ViewModels/LoadingViewModel.swift"
+            filePath = "384/Views/DetailViews/EventDetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "increaseProgress(value:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "deleteModel()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DF5BBF3D-B251-46BE-A4A7-8F93E5C4B3D4 - 4d87649b48188418"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_84.EventDetailView.deleteModel() -&gt; ()"
+                  moduleName = "384"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/384/Views/DetailViews/EventDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "DF5BBF3D-B251-46BE-A4A7-8F93E5C4B3D4 - 4d87649b48188418"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_84.EventDetailView.deleteModel() -&gt; ()"
+                  moduleName = "384"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/384/Views/DetailViews/EventDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "DF5BBF3D-B251-46BE-A4A7-8F93E5C4B3D4 - 4d87649b4818849c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_84.EventDetailView.deleteModel() -&gt; ()"
+                  moduleName = "384"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/384/Views/DetailViews/EventDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "DF5BBF3D-B251-46BE-A4A7-8F93E5C4B3D4 - 4d87649b4818849c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_84.EventDetailView.deleteModel() -&gt; ()"
+                  moduleName = "384"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/384/Views/DetailViews/EventDetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0406A672-39DF-4217-875E-80D9B3C95310"
+            uuid = "DCC228E7-82E3-4CE3-8B3B-5D5E5614E689"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "384/ViewModels/LoadingViewModel.swift"
+            filePath = "384/ViewModels/PostsTabViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "increaseProgress(value:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "20B277B9-AEDD-48C8-B1A5-1E20A9FBF726"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "384/ViewModels/LoadingViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "nextView"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "99442855-C10E-40FE-AC68-33D4464E0687"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "384/Services/StorageService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "isFirstLaunch"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "posts"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>

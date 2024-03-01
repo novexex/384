@@ -1,9 +1,7 @@
 
 import SwiftUI
 
-struct NewBudgetView: View {
-    let isIncome: Bool
-    
+struct NewPostView: View {
     @StateObject private var viewModel = ViewModel()
     @Environment(\.presentationMode) private var presentationMode
     
@@ -15,22 +13,16 @@ struct NewBudgetView: View {
             VStack {
                 DragIndicator()
                 
-                Text("New \(viewModel.isIncome ? "income" : "expense")")
+                Text("New post")
                     .font(.system(size: 34))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity,
                            alignment: .leading)
                 
-                CustomTextField(placeholder: "Title", text: $viewModel.title)
+                CustomTextField(placeholder: "Name post", text: $viewModel.name)
                     .frame(height: 62)
                 
-                HStack {
-                    DatePickerTextField(date: $viewModel.date,
-                                        isLarge: false)
-                    
-                    CustomTextField(placeholder: "Sum", text: $viewModel.sum, isLarge: false)
-                }
-                .frame(height: 62)
+                CustomTextField(placeholder: "Text", text: $viewModel.text, isExpandable: true)
                 
                 Spacer()
                 
@@ -46,12 +38,9 @@ struct NewBudgetView: View {
             }
             .padding()
         }
-        .onAppear {
-            viewModel.isIncome = isIncome
-        }
     }
 }
 
 #Preview {
-    NewBudgetView(isIncome: true)
+    NewPostView()
 }

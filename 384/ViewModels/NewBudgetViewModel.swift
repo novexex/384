@@ -4,6 +4,8 @@ import RealmSwift
 
 extension NewBudgetView {
     final class ViewModel: ObservableObject {
+        let realm = try? Realm()
+        
         @Published var title = ""
         @Published var date: Date?
         @Published var sum = ""
@@ -19,7 +21,7 @@ extension NewBudgetView {
             sumAmount != nil
         }
         
-        func saveModel(with realm: Realm) {
+        func saveModel() {
             guard let date, let sumAmount else { return }
             
             let eventModel = BudgetModel(title: title,
@@ -27,8 +29,8 @@ extension NewBudgetView {
                                          sum: sumAmount,
                                          isIncome: isIncome)
             
-            try? realm.write {
-                realm.add(eventModel)
+            try? realm?.write {
+                realm?.add(eventModel)
             }
         }
     }

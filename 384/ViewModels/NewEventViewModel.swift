@@ -4,6 +4,8 @@ import RealmSwift
 
 extension NewEventView {
     final class ViewModel: ObservableObject {
+        let realm = try? Realm()
+        
         @Published var firstTeamName = ""
         @Published var firstTeamScore = ""
         @Published var secondTeamName = ""
@@ -30,7 +32,7 @@ extension NewEventView {
             date != nil
         }
         
-        func saveModel(with realm: Realm) {
+        func saveModel() {
             guard let firstScore,
                   let secondScore,
                   let sportType,
@@ -44,8 +46,8 @@ extension NewEventView {
                                         subtitle: subtitle,
                                         date: date)
             
-            try? realm.write {
-                realm.add(eventModel)
+            try? realm?.write {
+                realm?.add(eventModel)
             }
         }
     }

@@ -4,8 +4,8 @@ import RealmSwift
 
 struct EventDetailView: View {
     let model: EventModel
-    
-    @StateObject private var viewModel = ViewModel()
+
+    @Environment(\.presentationMode) private var presentationMode
     
     var body: some View {
         ZStack {
@@ -17,7 +17,8 @@ struct EventDetailView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                 
                 Button {
-                    viewModel.delete(model)
+                    deleteModel()
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image(systemName: "trash")
                         .resizable()
@@ -75,14 +76,22 @@ struct EventDetailView: View {
             .padding()
         }
     }
+    
+    private func deleteModel() {
+        if let model = model.thaw(), let realm = model.realm {
+            try? realm.write {
+                realm.delete(model)
+            }
+        }
+    }
 }
 
-#Preview {
-    EventDetailView(model: .init(firstTeamName: "Febers",
-                                 firstTeamScore: 0,
-                                 secondTeamName: "Toronto",
-                                 secondTeamScore: 1,
-                                 sportType: .basketball,
-                                 subtitle: "Sky arena, Denver",
-                                 date: Date()))
-}
+//#Preview {
+//    EventDetailView(model: .init(firstTeamName: "Febers",
+//                                 firstTeamScore: 0,
+//                                 secondTeamName: "Toronto",
+//                                 secondTeamScore: 1,
+//                                 sportType: .basketball,
+//                                 subtitle: "Sky arena, Denver",
+//                                 date: Date()))
+//}

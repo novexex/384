@@ -4,7 +4,6 @@ import RealmSwift
 
 struct NewEventView: View {
     @Environment(\.presentationMode) private var presentationMode
-    @Environment(\.realm) private var realm
     @StateObject private var viewModel = ViewModel()
     
     var body: some View {
@@ -60,7 +59,7 @@ struct NewEventView: View {
                     
                     CustomButton(text: "Add",
                                  disabled: !viewModel.isAddButtonActive) {
-                        viewModel.saveModel(with: realm)
+                        viewModel.saveModel()
                         presentationMode.wrappedValue.dismiss()
                     }
                                  .frame(height: 62)

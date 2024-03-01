@@ -1,9 +1,7 @@
 
 import SwiftUI
-import RealmSwift
 
 struct SettingsTabView: View {
-    @Environment(\.realm) private var realm
     @Environment(\.presentationMode) private var presentationMode
     @StateObject private var viewModel = ViewModel()
     
@@ -37,8 +35,7 @@ struct SettingsTabView: View {
                     Alert(title: Text("Reset Confirmation"),
                           message: Text("Your progress will be permanently reset. Do you really want to delete all data?"),
                           primaryButton: .destructive(Text("Reset")) {
-                        viewModel.reset(with: realm, 
-                                        presentationMode: presentationMode)
+                        viewModel.reset(presentationMode: presentationMode)
                     },
                           secondaryButton: .cancel(Text("Cancel"))
                     )

@@ -2,7 +2,6 @@
 import SwiftUI
 
 struct NewArticleView: View {
-    @Environment(\.realm) private var realm
     @Environment(\.presentationMode) private var presentationMode
     @ObservedObject private var viewModel = ViewModel()
     
@@ -43,7 +42,7 @@ struct NewArticleView: View {
                     
                     CustomButton(text: "Add",
                                  disabled: !viewModel.isAddButtonActive) {
-                        viewModel.saveModel(with: realm)
+                        viewModel.saveModel()
                         presentationMode.wrappedValue.dismiss()
                     }
                                  .frame(height: 62)

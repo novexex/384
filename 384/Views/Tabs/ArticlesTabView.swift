@@ -16,7 +16,7 @@ struct ArticlesTabView: View {
                 
                 Spacer()
                 
-                if viewModel.isEmpty {
+                if viewModel.articles.isEmpty {
                     emptyArticles
                 } else {
                     articlesScroll

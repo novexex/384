@@ -2,14 +2,16 @@
 import SwiftUI
 
 extension View {
-    func navigate<NewView: View>(to view: NewView, when binding: Binding<Bool>) -> some View {
+    func navigate<NewView: View>(to view: NewView, 
+                                 when binding: Binding<Bool>,
+                                 dismissCallback: @escaping () -> Void = {}) -> some View {
         NavigationView {
             ZStack {
                 self
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
                 NavigationLink(
-                    destination: view
+                    destination: view.onDisappear { dismissCallback() }
                         .navigationBarTitle("")
                         .navigationBarHidden(true),
                     isActive: binding

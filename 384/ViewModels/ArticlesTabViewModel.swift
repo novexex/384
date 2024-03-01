@@ -8,10 +8,6 @@ extension ArticlesTabView {
         
         @Published var isSheetPresented = false
         
-        var isEmpty: Bool {
-            _articles.isEmpty
-        }
-        
         var articles: [ArticleModel] {
             Array(_articles)
         }

@@ -3,23 +3,18 @@ import SwiftUI
 import RealmSwift
 
 extension BudgetTabView {
-    final class ViewModel: ObservableObject {
+    struct ViewModel: DynamicProperty {
         @ObservedResults(BudgetModel.self) private var _budget
         
-        @Published var isSheetPresented = false
-        @Published var selectedSection = 0
-        @Published var showSheet = false
-        
-        var isEmpty: Bool {
-            _budget.isEmpty
-        }
-        
+        @State var selectedSection = 0
+        @State var showSheet = false
+                
         var incomes: [BudgetModel] {
-            Array(_budget).filter { $0.isIncome }
+            _budget.filter { $0.isIncome }
         }
         
         var expenses: [BudgetModel] {
-            Array(_budget).filter { !$0.isIncome }
+            _budget.filter { !$0.isIncome }
         }
         
         var isIncome: Bool {

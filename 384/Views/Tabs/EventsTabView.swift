@@ -1,8 +1,11 @@
 
 import SwiftUI
+import RealmSwift
 
 struct EventsTabView: View {
-    @StateObject private var viewModel = ViewModel()
+    var viewModel = ViewModel()
+    
+    @State private var isSheetPresented = false
     
     var body: some View {
         ZStack {
@@ -11,19 +14,19 @@ struct EventsTabView: View {
             
             VStack {
                 NavigationBar(title: "Events") {
-                    viewModel.isSheetPresented.toggle()
+                    isSheetPresented.toggle()
                 }
                 
                 Spacer()
                 
-                if viewModel.isEmpty {
+                if viewModel.events.isEmpty {
                     emptyEvents
                 } else {
                     eventsScroll
                 }
             }
         }
-        .sheet(isPresented: $viewModel.isSheetPresented) {
+        .sheet(isPresented: $isSheetPresented) {
             NewEventView()
         }
     }

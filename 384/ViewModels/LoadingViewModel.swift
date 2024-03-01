@@ -29,10 +29,17 @@ extension LoadingView {
             guard progressValue < totalProgressValue else {
                 timer.upstream.connect().cancel()
                 isLoadingEnded = true
+                progressValue = 0
                 return
             }
             
             progressValue += value
+        }
+        
+        func restart() {
+            timer = Timer.publish(every: 0.1,
+                                  on: .main,
+                                  in: .common).autoconnect()
         }
     }
 }

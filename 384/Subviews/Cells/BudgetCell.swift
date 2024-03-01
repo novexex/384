@@ -1,10 +1,13 @@
 
 import SwiftUI
+import RealmSwift
 
 struct BudgetCell: View {
-    let model: BudgetModel
+    weak var _model: BudgetModel?
     
-    @StateObject private var viewModel = ViewModel()
+    var model: BudgetModel {
+        _model ?? BudgetModel()
+    }
     
     private var sumColor: Color {
         model.isIncome ? .primaryGreen : .primaryRed
@@ -24,7 +27,12 @@ struct BudgetCell: View {
                 Spacer()
                 
                 Button {
-                    viewModel.delete(model)
+                    if let model = model.thaw(), let realm = model.realm {
+                        try! realm.write {
+                            realm.delete(model)
+                            realm.refresh()
+                        }
+                    }
                 } label: {
                     Image(systemName: "trash")
                         .foregroundColor(.primaryDisabled)
@@ -48,9 +56,9 @@ struct BudgetCell: View {
     }
 }
 
-#Preview {
-    BudgetCell(model: .init(title: "Hotel room",
-                            date: Date(),
-                            sum: -1500, 
-                            isIncome: true))
-}
+//#Preview {
+//    BudgetCell(model: .init(title: "Hotel room",
+//                            date: Date(),
+//                            sum: -1500, 
+//                            isIncome: true))
+//}
