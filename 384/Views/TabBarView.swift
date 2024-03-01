@@ -4,6 +4,12 @@ import SwiftUI
 struct TabBarView: View {
     @State private var selectedTab = 0
     
+    init() {
+        if let window = UIApplication.shared.windows.first {
+            window.backgroundColor = .black
+        }
+    }
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             ArticlesTabView()

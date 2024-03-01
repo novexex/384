@@ -4,12 +4,6 @@ import SwiftUI
 struct ArticlesTabView: View {
     @StateObject private var viewModel = ViewModel()
     
-    init() {
-        if let window = UIApplication.shared.windows.first {
-            window.backgroundColor = .black
-        }
-    }
-    
     var body: some View {
         ZStack {
             Color.accent

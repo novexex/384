@@ -28,7 +28,7 @@ struct CustomTextField: View {
     var body: some View {
         GeometryReader { geo in
             textField
-                .frame(width: isLarge ? geo.size.width / 1.1 : geo.size.width / 2.2)
+                .frame(width: isLarge ? geo.size.width / 1.1 : geo.size.width / 1.25)
                 .padding(.horizontal)
                 .padding(.vertical, 20)
                 .overlay(
@@ -36,10 +36,9 @@ struct CustomTextField: View {
                         .inset(by: 0.5)
                         .stroke(isFilled ? .primaryBlue : .primaryDisabled, lineWidth: 1)
                 )
-                .frame(maxWidth: geo.size.width,
-                       minHeight: 62,
-                       maxHeight: .infinity,
-                       alignment: isExpandable ? .top : .center)
+//                .frame(maxWidth: geo.size.width,
+//                       maxHeight: .infinity,
+//                       alignment: isExpandable ? .top : .center)
         }
     }
     
@@ -70,5 +69,5 @@ struct CustomTextField: View {
 }
 
 #Preview {
-    CustomTextField(placeholder: "Headline", text: .constant(""), isLarge: true, isExpandable: true)
+    CustomTextField(placeholder: "Headline", text: .constant(""), isLarge: false, isExpandable: true)
 }

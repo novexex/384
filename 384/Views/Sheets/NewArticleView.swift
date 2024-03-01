@@ -25,7 +25,7 @@ struct NewArticleView: View {
                                     text: $viewModel.title)
                         .frame(height: 62)
                     
-                    sportsScroll
+                    SportsScroll(sportType: $viewModel.sportType)
                         .padding(.trailing, -10)
                     
                     StatusTextField(status: $viewModel.status)
@@ -55,25 +55,6 @@ struct NewArticleView: View {
             .padding()
             .ignoresSafeArea(.keyboard)
         }
-    }
-    
-    var sportsScroll: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(SportType.allCases, id: \.rawValue) { sport in
-                    Button {
-                        viewModel.sportType = sport
-                    } label: {
-                        Text(sport.rawValue)
-                    }
-                    .lineLimit(1)
-                    .sportType()
-                    .opacity(sport == viewModel.sportType ? 1 : 0.5)
-                }
-            }
-            .padding(.trailing, 10)
-        }
-        .frame(height: 22)
     }
 }
 
