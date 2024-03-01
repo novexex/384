@@ -7,7 +7,7 @@ extension NewBudgetView {
         let realm = try? Realm()
         
         @Published var title = ""
-        @Published var date: Date?
+        @Published var date = Date()
         @Published var sum = ""
         @Published var isIncome = false
         
@@ -17,12 +17,11 @@ extension NewBudgetView {
         
         var isAddButtonActive: Bool {
             !title.isEmpty &&
-            date != nil &&
             sumAmount != nil
         }
         
         func saveModel() {
-            guard let date, let sumAmount else { return }
+            guard let sumAmount else { return }
             
             let eventModel = BudgetModel(title: title,
                                          date: date,

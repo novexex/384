@@ -52,7 +52,7 @@ struct NewEventView: View {
                                     text: $viewModel.subtitle)
                         .frame(height: 62)
                     
-                    DatePickerTextField(date: $viewModel.date)
+                    DatePickerTextField(date: $viewModel.date, isLarge: true)
                         .frame(height: 62)
                     
                     Spacer()

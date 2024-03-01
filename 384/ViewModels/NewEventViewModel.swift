@@ -12,7 +12,7 @@ extension NewEventView {
         @Published var secondTeamScore = ""
         @Published var sportType: SportType?
         @Published var subtitle = ""
-        @Published var date: Date?
+        @Published var date = Date()
         
         var firstScore: Int? {
             Int(firstTeamScore)
@@ -28,15 +28,13 @@ extension NewEventView {
             !secondTeamName.isEmpty &&
             secondScore != nil &&
             sportType != nil &&
-            !subtitle.isEmpty &&
-            date != nil
+            !subtitle.isEmpty
         }
         
         func saveModel() {
             guard let firstScore,
                   let secondScore,
-                  let sportType,
-                  let date else { return }
+                  let sportType else { return }
             
             let eventModel = EventModel(firstTeamName: firstTeamName,
                                         firstTeamScore: firstScore,

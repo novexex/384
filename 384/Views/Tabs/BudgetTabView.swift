@@ -17,7 +17,9 @@ struct BudgetTabView: View {
                 .ignoresSafeArea()
             
             VStack {
-                NavigationBar(title: "Budget", isMenu: true, isIncome: $isIncome) {
+                NavigationBar(title: "Budget",
+                              isMenu: true,
+                              isIncome: $isIncome) {
                     viewModel.showSheet.toggle()
                 }
                 

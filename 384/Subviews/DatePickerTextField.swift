@@ -2,24 +2,14 @@
 import SwiftUI
 
 struct DatePickerTextField: View {
-    @Binding var date: Date?
-    @State private var newDate = Date()
+    @Binding var date: Date
     let isLarge: Bool
-    
-    init(date: Binding<Date?>, isLarge: Bool = true) {
-        self._date = date
-        self.isLarge = isLarge
-    }
-    
-    var isDateSet: Bool {
-        date != nil
-    }
-    
+
     var body: some View {
         ZStack {
             GeometryReader { geo in
                 HStack {
-                    DatePicker("", selection: $newDate, displayedComponents: .date)
+                    DatePicker("", selection: $date, displayedComponents: .date)
                         .labelsHidden()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .colorScheme(.dark)
@@ -30,7 +20,7 @@ struct DatePickerTextField: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .inset(by: 0.5)
-                        .stroke(isDateSet ? .primaryBlue : .primaryDisabled,
+                        .stroke(.primaryBlue,
                                 lineWidth: 1)
                 )
                 .frame(maxWidth: .infinity,
@@ -38,9 +28,6 @@ struct DatePickerTextField: View {
                        alignment: .center)
             }
         }
-        .onChange(of: newDate, perform: { value in
-            date = value
-        })
     }
 }
 
