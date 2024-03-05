@@ -8,6 +8,5 @@ enum Constants {
                                       "Add your statistics and earn more",
                                       "Integrated notes to help you in the events"]
     
-    static let appID = ""
-    static let appUrl = "itms-apps://itunes.apple.com/app/id\(appID)"
+    static let appUrl = "https://apps.apple.com/us/app/accounting-league/id6478861546"
 }

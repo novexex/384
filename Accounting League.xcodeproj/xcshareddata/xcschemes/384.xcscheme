@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB63AE792AE810A300454218"
-               BuildableName = "384.app"
-               BlueprintName = "384"
-               ReferencedContainer = "container:384.xcodeproj">
+               BuildableName = "Accounting League.app"
+               BlueprintName = "Accounting League"
+               ReferencedContainer = "container:Accounting League.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB63AE792AE810A300454218"
-            BuildableName = "384.app"
-            BlueprintName = "384"
-            ReferencedContainer = "container:384.xcodeproj">
+            BuildableName = "Accounting League.app"
+            BlueprintName = "Accounting League"
+            ReferencedContainer = "container:Accounting League.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB63AE792AE810A300454218"
-            BuildableName = "384.app"
-            BlueprintName = "384"
-            ReferencedContainer = "container:384.xcodeproj">
+            BuildableName = "Accounting League.app"
+            BlueprintName = "Accounting League"
+            ReferencedContainer = "container:Accounting League.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -6,7 +6,6 @@ extension LoadingView {
         @Published private(set) var progressValue: Double = 0
         @Published var isLoadingEnded = false
         let totalProgressValue: Double
-        private let animationDuration: TimeInterval
         private(set) var timer = Timer.publish(every: 0.1,
                                                on: .main,
                                                in: .common).autoconnect()
@@ -19,9 +18,7 @@ extension LoadingView {
             }
         }
         
-        init(animationDuration: TimeInterval = 4,
-             totalProgressValue: Double = 10) {
-            self.animationDuration = animationDuration
+        init(totalProgressValue: Double = 10) {
             self.totalProgressValue = totalProgressValue
         }
         
