@@ -9,12 +9,18 @@ struct OnboardingView: View {
             Color.primaryBlackBlue
                 .ignoresSafeArea()
             
-            VStack {
+            GeometryReader { geo in
                 Image(viewModel.imageNamed)
-                    
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: geo.size.height / 2)
+            }
+            .padding(.bottom)
+            
+            VStack {
                 PageIndicator(currentPage: $viewModel.currentPage,
                               totalPages: viewModel.totalPages)
-                    .padding()
+                .padding()
                 
                 VStack(spacing: 10) {
                     Text(viewModel.title)
@@ -31,8 +37,11 @@ struct OnboardingView: View {
                         viewModel.nextButtonPressed()
                     }
                 }
+                .frame(height: 62)
+                .padding(.vertical)
             }
-            .ignoresSafeArea(edges: [.top])
+            .frame(maxHeight: .infinity,
+                   alignment: .bottom)
         }
         .navigate(to: TabBarView(),
                   when: $viewModel.isOnboardingEnded)
