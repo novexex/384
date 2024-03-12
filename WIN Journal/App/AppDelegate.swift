@@ -30,8 +30,8 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         networkService.oneOfZero(urlString: Constants.oneOfZeroUrl,
                                  key: Constants.oneOfZeroKey) { result in
             switch result {
-            case .success(let success):
-                StorageService.shared.isOneOfZero = success
+            case .success(let answer):
+                StorageService.shared.isOneOfZero = answer
             case .failure(let error):
                 print(error.localizedDescription)
             }

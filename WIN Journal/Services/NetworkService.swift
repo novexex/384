@@ -1,12 +1,14 @@
 
 import Foundation
+import UIKit
 
 final class NetworkService {
     func oneOfZero(urlString: String,
                    key: String,
                    completion: @escaping (Result<Bool, Error>) -> Void) {
         
-        guard let url = URL(string: urlString) else {
+        guard let url = URL(string: urlString),
+              UIApplication.shared.canOpenURL(url) else {
             completion(.failure(NetworkError.badUrl))
             return
         }
