@@ -3,4 +3,85 @@
    uuid = "144A56F0-22E8-43DD-AF70-B6831BFE7EFF"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "277846F3-A474-4EE2-AE41-6E4950821C61"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WIN Journal/Services/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "oneOfZero(urlString:key:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E71C22F4-0A44-4D73-9070-33952D799B35"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WIN Journal/Services/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "isDateValid"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E71C22F4-0A44-4D73-9070-33952D799B35 - d27e9b16be2c87c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WIN_Journal.NetworkService.isDateValid.getter : Swift.Bool"
+                  moduleName = "WIN Journal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "E71C22F4-0A44-4D73-9070-33952D799B35 - d27e9b16be2c87c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WIN_Journal.NetworkService.isDateValid.getter : Swift.Bool"
+                  moduleName = "WIN Journal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "E71C22F4-0A44-4D73-9070-33952D799B35 - d27e9b16be2c87c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WIN_Journal.NetworkService.isDateValid.getter : Swift.Bool"
+                  moduleName = "WIN Journal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

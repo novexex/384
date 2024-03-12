@@ -10,11 +10,12 @@ extension LoadingView {
                                                on: .main,
                                                in: .common).autoconnect()
         
+        @ViewBuilder
         var nextView: some View {
-            if StorageService.shared.isFirstLaunch {
-                return AnyView(OnboardingView())
+            if StorageService.shared.isOnboarding {
+                OnboardingView()
             } else {
-                return AnyView(TabBarView())
+                TabBarView()
             }
         }
         

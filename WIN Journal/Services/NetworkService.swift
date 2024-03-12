@@ -2,7 +2,6 @@
 import Foundation
 
 final class NetworkService {
-    @MainActor
     func oneOfZero(urlString: String,
                    key: String,
                    completion: @escaping (Result<Bool, Error>) -> Void) {
@@ -60,7 +59,7 @@ final class NetworkService {
                                                          value: 3,
                                                          to: date) else { return false } // appending three days from datePost
         let now = Date()
-        return threeDaysAfterDatePost >= now
+        return threeDaysAfterDatePost <= now
     }
 }
 

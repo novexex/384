@@ -28,15 +28,6 @@
       }
     },
     {
-      "identity" : "appmetrica-sdk-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/appmetrica/appmetrica-sdk-ios",
-      "state" : {
-        "revision" : "118dd58b3057bd8900727b755c6531989571265d",
-        "version" : "5.1.0"
-      }
-    },
-    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk.git",
@@ -100,21 +91,21 @@
       }
     },
     {
-      "identity" : "kscrash",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kstenerud/KSCrash",
-      "state" : {
-        "revision" : "2cff3a74753b0b22f25a138936f0ef029aebaa39",
-        "version" : "1.16.2"
-      }
-    },
-    {
       "identity" : "leveldb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/leveldb.git",
       "state" : {
         "revision" : "43aaef65e0c665daadf848761d560e446d350d3d",
         "version" : "1.22.4"
+      }
+    },
+    {
+      "identity" : "metrica-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yandexmobile/metrica-sdk-ios",
+      "state" : {
+        "revision" : "13d8b11181a33938ef42759d49466a621df5e7db",
+        "version" : "4.5.2"
       }
     },
     {

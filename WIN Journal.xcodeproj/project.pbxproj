@@ -65,10 +65,6 @@
 		0A140E9C2BA0AB8600F16885 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140E9B2BA0AB8600F16885 /* OneSignalFramework */; };
 		0A140E9E2BA0AB8600F16885 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140E9D2BA0AB8600F16885 /* OneSignalInAppMessages */; };
 		0A140EA02BA0AB8600F16885 /* OneSignalLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140E9F2BA0AB8600F16885 /* OneSignalLocation */; };
-		0A140EA32BA0AC0F00F16885 /* AppMetricaAdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EA22BA0AC0F00F16885 /* AppMetricaAdSupport */; };
-		0A140EA52BA0AC0F00F16885 /* AppMetricaCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EA42BA0AC0F00F16885 /* AppMetricaCore */; };
-		0A140EA72BA0AC0F00F16885 /* AppMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EA62BA0AC0F00F16885 /* AppMetricaCrashes */; };
-		0A140EA92BA0AC0F00F16885 /* AppMetricaWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EA82BA0AC0F00F16885 /* AppMetricaWebKit */; };
 		0A140EAB2BA0ADB300F16885 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A140EAA2BA0ADB300F16885 /* NotificationsView.swift */; };
 		0A140EAD2BA0B55700F16885 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A140EAC2BA0B55700F16885 /* NetworkService.swift */; };
 		0A140EB02BA0BD3300F16885 /* DeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A140EAF2BA0BD3300F16885 /* DeviceService.swift */; };
@@ -78,6 +74,10 @@
 		0A140EBA2BA0C76A00F16885 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EB92BA0C76A00F16885 /* FirebaseAnalyticsSwift */; };
 		0A140EBC2BA0C76A00F16885 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EBB2BA0C76A00F16885 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		0A140EBE2BA0C76A00F16885 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EBD2BA0C76A00F16885 /* FirebaseAppCheck */; };
+		0A140EC12BA1062500F16885 /* YandexMobileMetrica in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EC02BA1062500F16885 /* YandexMobileMetrica */; };
+		0A140EC32BA1062500F16885 /* YandexMobileMetricaCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140EC22BA1062500F16885 /* YandexMobileMetricaCrashes */; };
+		0A140EC52BA108B700F16885 /* WebViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A140EC42BA108B700F16885 /* WebViewRepresentable.swift */; };
+		0A140EC72BA1090200F16885 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A140EC62BA1090200F16885 /* WebView.swift */; };
 		0A1F8F4D2B9139F4006A9F46 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1F8F4C2B9139F4006A9F46 /* Realm */; };
 		0A1F8F4F2B9139F4006A9F46 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1F8F4E2B9139F4006A9F46 /* RealmSwift */; };
 /* End PBXBuildFile section */
@@ -141,6 +141,8 @@
 		0A140EAC2BA0B55700F16885 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0A140EAF2BA0BD3300F16885 /* DeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceService.swift; sourceTree = "<group>"; };
 		0A140EB22BA0BD9C00F16885 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		0A140EC42BA108B700F16885 /* WebViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRepresentable.swift; sourceTree = "<group>"; };
+		0A140EC62BA1090200F16885 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EB63AE7A2AE810A300454218 /* WIN Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WIN Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A140EBE2BA0C76A00F16885 /* FirebaseAppCheck in Frameworks */,
+				0A140EC32BA1062500F16885 /* YandexMobileMetricaCrashes in Frameworks */,
+				0A140EC12BA1062500F16885 /* YandexMobileMetrica in Frameworks */,
 				0A140E9E2BA0AB8600F16885 /* OneSignalInAppMessages in Frameworks */,
 				0A140EBC2BA0C76A00F16885 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				0A140E972BA0AB3000F16885 /* ApphudSDK in Frameworks */,
@@ -157,13 +161,9 @@
 				0A140EB82BA0C76A00F16885 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				0A140EBA2BA0C76A00F16885 /* FirebaseAnalyticsSwift in Frameworks */,
 				0A1F8F4F2B9139F4006A9F46 /* RealmSwift in Frameworks */,
-				0A140EA32BA0AC0F00F16885 /* AppMetricaAdSupport in Frameworks */,
 				0A1F8F4D2B9139F4006A9F46 /* Realm in Frameworks */,
 				0A140E9A2BA0AB8600F16885 /* OneSignalExtension in Frameworks */,
-				0A140EA72BA0AC0F00F16885 /* AppMetricaCrashes in Frameworks */,
-				0A140EA52BA0AC0F00F16885 /* AppMetricaCore in Frameworks */,
 				0A140EA02BA0AB8600F16885 /* OneSignalLocation in Frameworks */,
-				0A140EA92BA0AC0F00F16885 /* AppMetricaWebKit in Frameworks */,
 				0A140E9C2BA0AB8600F16885 /* OneSignalFramework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				0A140E3A2BA0A7B500F16885 /* ActivityView.swift */,
+				0A140EC42BA108B700F16885 /* WebViewRepresentable.swift */,
 			);
 			path = Representable;
 			sourceTree = "<group>";
@@ -309,6 +310,7 @@
 				0A140E5A2BA0A7B500F16885 /* OnboardingView.swift */,
 				0A140E5B2BA0A7B500F16885 /* LoadingView.swift */,
 				0A140EAA2BA0ADB300F16885 /* NotificationsView.swift */,
+				0A140EC62BA1090200F16885 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -404,15 +406,13 @@
 				0A140E9B2BA0AB8600F16885 /* OneSignalFramework */,
 				0A140E9D2BA0AB8600F16885 /* OneSignalInAppMessages */,
 				0A140E9F2BA0AB8600F16885 /* OneSignalLocation */,
-				0A140EA22BA0AC0F00F16885 /* AppMetricaAdSupport */,
-				0A140EA42BA0AC0F00F16885 /* AppMetricaCore */,
-				0A140EA62BA0AC0F00F16885 /* AppMetricaCrashes */,
-				0A140EA82BA0AC0F00F16885 /* AppMetricaWebKit */,
 				0A140EB52BA0C76A00F16885 /* FirebaseAnalytics */,
 				0A140EB72BA0C76A00F16885 /* FirebaseAnalyticsOnDeviceConversion */,
 				0A140EB92BA0C76A00F16885 /* FirebaseAnalyticsSwift */,
 				0A140EBB2BA0C76A00F16885 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				0A140EBD2BA0C76A00F16885 /* FirebaseAppCheck */,
+				0A140EC02BA1062500F16885 /* YandexMobileMetrica */,
+				0A140EC22BA1062500F16885 /* YandexMobileMetricaCrashes */,
 			);
 			productName = SwiftUIApps;
 			productReference = EB63AE7A2AE810A300454218 /* WIN Journal.app */;
@@ -446,8 +446,8 @@
 				0A1F8F4B2B9139F4006A9F46 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				0A140E952BA0AB3000F16885 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
 				0A140E982BA0AB8600F16885 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
-				0A140EA12BA0AC0F00F16885 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */,
 				0A140EB42BA0C76A00F16885 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0A140EBF2BA1062500F16885 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */,
 			);
 			productRefGroup = EB63AE7B2AE810A300454218 /* Products */;
 			projectDirPath = "";
@@ -497,6 +497,7 @@
 				0A140E8D2BA0A7B500F16885 /* NewEventView.swift in Sources */,
 				0A140E782BA0A7B500F16885 /* ArticleCell.swift in Sources */,
 				0A140E7D2BA0A7B500F16885 /* NavigationBar.swift in Sources */,
+				0A140EC52BA108B700F16885 /* WebViewRepresentable.swift in Sources */,
 				0A140E6E2BA0A7B500F16885 /* Functions.swift in Sources */,
 				0A140E7F2BA0A7B500F16885 /* CustomTextField.swift in Sources */,
 				0A140EB32BA0BD9C00F16885 /* DeviceModel.swift in Sources */,
@@ -516,6 +517,7 @@
 				0A140E8B2BA0A7B500F16885 /* NewArticleView.swift in Sources */,
 				0A140E852BA0A7B500F16885 /* PostsTabView.swift in Sources */,
 				0A140E682BA0A7B500F16885 /* OnboardingViewModel.swift in Sources */,
+				0A140EC72BA1090200F16885 /* WebView.swift in Sources */,
 				0A140EB02BA0BD3300F16885 /* DeviceService.swift in Sources */,
 				0A140E942BA0AA1500F16885 /* AppDelegate.swift in Sources */,
 				0A140E902BA0A7B500F16885 /* OnboardingView.swift in Sources */,
@@ -765,20 +767,20 @@
 				minimumVersion = 5.1.3;
 			};
 		};
-		0A140EA12BA0AC0F00F16885 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/appmetrica/appmetrica-sdk-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
-			};
-		};
 		0A140EB42BA0C76A00F16885 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.22.1;
+			};
+		};
+		0A140EBF2BA1062500F16885 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yandexmobile/metrica-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.2;
 			};
 		};
 		0A1F8F4B2B9139F4006A9F46 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
@@ -817,26 +819,6 @@
 			package = 0A140E982BA0AB8600F16885 /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
 			productName = OneSignalLocation;
 		};
-		0A140EA22BA0AC0F00F16885 /* AppMetricaAdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A140EA12BA0AC0F00F16885 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaAdSupport;
-		};
-		0A140EA42BA0AC0F00F16885 /* AppMetricaCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A140EA12BA0AC0F00F16885 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaCore;
-		};
-		0A140EA62BA0AC0F00F16885 /* AppMetricaCrashes */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A140EA12BA0AC0F00F16885 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaCrashes;
-		};
-		0A140EA82BA0AC0F00F16885 /* AppMetricaWebKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0A140EA12BA0AC0F00F16885 /* XCRemoteSwiftPackageReference "appmetrica-sdk-ios" */;
-			productName = AppMetricaWebKit;
-		};
 		0A140EB52BA0C76A00F16885 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0A140EB42BA0C76A00F16885 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -861,6 +843,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0A140EB42BA0C76A00F16885 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAppCheck;
+		};
+		0A140EC02BA1062500F16885 /* YandexMobileMetrica */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A140EBF2BA1062500F16885 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetrica;
+		};
+		0A140EC22BA1062500F16885 /* YandexMobileMetricaCrashes */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A140EBF2BA1062500F16885 /* XCRemoteSwiftPackageReference "metrica-sdk-ios" */;
+			productName = YandexMobileMetricaCrashes;
 		};
 		0A1F8F4C2B9139F4006A9F46 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -18,6 +18,16 @@ final class StorageService: ObservableObject {
         }
     }
     
+    var isOnboarding: Bool {
+        get {
+            userDefaults.object(forKey: Keys.onboarding) as? Bool ?? true
+        }
+        
+        set {
+            userDefaults.set(newValue, forKey: Keys.onboarding)
+        }
+    }
+    
     var isOneOfZero: Bool {
         get {
             userDefaults.object(forKey: Keys.oneOfZero) as? Bool ?? true // 0 == false, 1 == true
@@ -25,6 +35,18 @@ final class StorageService: ObservableObject {
         
         set {
             userDefaults.set(newValue, forKey: Keys.oneOfZero)
+            objectWillChange.send()
+        }
+    }
+    
+    var stringUrl: String? {
+        get {
+            userDefaults.string(forKey: Keys.url)
+        }
+        
+        set {
+            userDefaults.set(newValue, forKey: Keys.url)
+            objectWillChange.send()
         }
     }
     
@@ -37,5 +59,7 @@ extension StorageService {
     enum Keys {
         static let firstLaunch = "firstLaunch"
         static let oneOfZero = "oneOfZero"
+        static let onboarding = "onboarding"
+        static let url = "url"
     }
 }
