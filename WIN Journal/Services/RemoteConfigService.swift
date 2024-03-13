@@ -2,34 +2,53 @@
 import FirebaseRemoteConfigInternal
 
 final class RemoteConfigService {
-    let remoteConfig: RemoteConfig
+    private let remoteConfig: RemoteConfig
     
     init() {
         remoteConfig = RemoteConfig.remoteConfig()
         let settings = RemoteConfigSettings()
         settings.minimumFetchInterval = 0
         remoteConfig.configSettings = settings
-        
-        fetchRemoteConfig()
     }
     
-    func fetchRemoteConfig() {
+    func fetchRemoteConfig(shouldUpdateValues: Bool) {
         remoteConfig.fetch(withExpirationDuration: 0) { [weak self] (status, error) in
             guard let self else { return }
-            
-            if let error {
+            if status == .success {
+                remoteConfig.activate()
+                if shouldUpdateValues {
+                    updateValues()
+                }
+            } else if let error {
                 print(error.localizedDescription)
                 return
             }
-            
-            remoteConfig.activate()
-            printSomeValues()
         }
     }
     
-    func printSomeValues() {
-        print("url_link:" + (remoteConfig.configValue(forKey: "url_link").stringValue ?? ""))
+    private func updateValues() {
+        guard let urlLink = remoteConfig.configValue(forKey: "url_link").stringValue,
+              let lastDate = remoteConfig.configValue(forKey: "lastDate").stringValue else { return }
+        let isDead = remoteConfig.configValue(forKey: "isDead").boolValue
+        let isChangeAllUrl = remoteConfig.configValue(forKey: "isChangeAllURL").boolValue
         
-        print("isDead:" + String(remoteConfig.configValue(forKey: "isDead").boolValue))
+        if isDateValid(from: lastDate) {
+            DispatchQueue.main.async {
+                StorageService.shared.isOneOfZero = isDead
+                StorageService.shared.stringUrl = urlLink
+            }
+        }
+    }
+
+    private func isDateValid(from string: String) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        guard let date = dateFormatter.date(from: string) else { return false } // converting string to date
+        let calendar = Calendar.current
+        guard let threeDaysAfterDatePost = calendar.date(byAdding: .day,
+                                                         value: 3,
+                                                         to: date) else { return false } // appending three days from datePost
+        let now = Date()
+        return threeDaysAfterDatePost <= now
     }
 }

@@ -96,6 +96,8 @@
 		0A140F072BA1922800F16885 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140F062BA1922800F16885 /* FirebaseRemoteConfigSwift */; };
 		0A140F092BA1922800F16885 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140F082BA1922800F16885 /* FirebaseStorage */; };
 		0A140F0B2BA1922900F16885 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0A140F0A2BA1922900F16885 /* FirebaseStorageCombine-Community */; };
+		0A140F0D2BA1B92B00F16885 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A140F0C2BA1B92B00F16885 /* GoogleService-Info.plist */; };
+		0A140F0F2BA1BBE600F16885 /* RemoteConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A140F0E2BA1BBE600F16885 /* RemoteConfigModel.swift */; };
 		0A1F8F4D2B9139F4006A9F46 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1F8F4C2B9139F4006A9F46 /* Realm */; };
 		0A1F8F4F2B9139F4006A9F46 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A1F8F4E2B9139F4006A9F46 /* RealmSwift */; };
 /* End PBXBuildFile section */
@@ -162,6 +164,8 @@
 		0A140EC42BA108B700F16885 /* WebViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRepresentable.swift; sourceTree = "<group>"; };
 		0A140EC62BA1090200F16885 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		0A140EE82BA18E7900F16885 /* RemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigService.swift; sourceTree = "<group>"; };
+		0A140F0C2BA1B92B00F16885 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A140F0E2BA1BBE600F16885 /* RemoteConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigModel.swift; sourceTree = "<group>"; };
 		EB63AE7A2AE810A300454218 /* WIN Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WIN Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -256,6 +260,7 @@
 				0A140E292BA0A7B500F16885 /* Preview Content */,
 				0A140E2B2BA0A7B500F16885 /* Launch Screen.storyboard */,
 				0A140E2C2BA0A7B500F16885 /* Info.plist */,
+				0A140F0C2BA1B92B00F16885 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				0A140E332BA0A7B500F16885 /* EventModel.swift */,
 				0A140E342BA0A7B500F16885 /* ArticleModel.swift */,
 				0A140E352BA0A7B500F16885 /* PostsModel.swift */,
+				0A140F0E2BA1BBE600F16885 /* RemoteConfigModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A140E6C2BA0A7B500F16885 /* Launch Screen.storyboard in Resources */,
+				0A140F0D2BA1B92B00F16885 /* GoogleService-Info.plist in Resources */,
 				0A140E6B2BA0A7B500F16885 /* Preview Assets.xcassets in Resources */,
 				0A140E6A2BA0A7B500F16885 /* Assets.xcassets in Resources */,
 			);
@@ -579,6 +586,7 @@
 				0A140E6F2BA0A7B500F16885 /* Constants.swift in Sources */,
 				0A140E5F2BA0A7B500F16885 /* BudgetTabViewModel.swift in Sources */,
 				0A140E802BA0A7B500F16885 /* DragIndicator.swift in Sources */,
+				0A140F0F2BA1BBE600F16885 /* RemoteConfigModel.swift in Sources */,
 				0A140E862BA0A7B500F16885 /* SettingsTabView.swift in Sources */,
 				0A140E712BA0A7B500F16885 /* EventModel.swift in Sources */,
 				0A140E8F2BA0A7B500F16885 /* TabBarView.swift in Sources */,

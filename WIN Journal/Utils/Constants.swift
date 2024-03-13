@@ -16,6 +16,4 @@ enum Constants {
     static let appHudApiKey = "app_abbtayREmLH8uVPuzP9euJkEtSiZJW"
     static let metricaApiKey = "b0c91e1f-0a8e-40f3-99db-481cc17e1f26"
     static let oneSignalApiKey = ""
-    
-    static let datePost = "12/03/2024" // dd/MM/yyyy
 }

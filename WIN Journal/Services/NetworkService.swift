@@ -5,6 +5,7 @@ import UIKit
 final class NetworkService {
     func oneOfZero(urlString: String,
                    key: String,
+                   timeoutInterval: TimeInterval,
                    completion: @escaping (Result<Bool, Error>) -> Void) {
         
         guard let url = URL(string: urlString),
@@ -13,7 +14,7 @@ final class NetworkService {
             return
         }
         
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: url, timeoutInterval: timeoutInterval)
         request.httpMethod = "POST"
         request.setValue("application/json; charset=utf-8",
                          forHTTPHeaderField: "Content-Type")
@@ -27,7 +28,12 @@ final class NetworkService {
             }
             
             if let error {
-                result = .failure(error)
+                if let error = error as? URLError,
+                    error.code == .timedOut {
+                    result = .failure(NetworkError.timeout)
+                } else {
+                    result = .failure(error)
+                }
                 return
             }
             
@@ -43,25 +49,13 @@ final class NetworkService {
             
             if StorageService.shared.isOneOfZero == false {
                 result = .success(false)
-            } else if let value = jsonDictionary[key] as? Bool, self.isDateValid {
+            } else if let value = jsonDictionary[key] as? Bool {
                 result = .success(value)
             } else {
                 result = .success(true)
             }
         }
         .resume()
-    }
-    
-    private var isDateValid: Bool {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        guard let date = dateFormatter.date(from: Constants.datePost) else { return false } // converting string to date
-        let calendar = Calendar.current
-        guard let threeDaysAfterDatePost = calendar.date(byAdding: .day,
-                                                         value: 3,
-                                                         to: date) else { return false } // appending three days from datePost
-        let now = Date()
-        return threeDaysAfterDatePost <= now
     }
 }
 
@@ -72,5 +66,6 @@ private extension NetworkService {
         case jsonValue
         case badUrl
         case date
+        case timeout
     }
 }

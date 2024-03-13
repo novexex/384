@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB8EBszojW25x93BQyqnv52StNG_hDeOsA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>774351300337</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hai.acc0unt1ngl4ague</string>
+	<key>PROJECT_ID</key>
+	<string>win-journal-440</string>
+	<key>STORAGE_BUCKET</key>
+	<string>win-journal-440.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:774351300337:ios:281c4c1c2ffc8acf5fab50</string>
+</dict>
+</plist>

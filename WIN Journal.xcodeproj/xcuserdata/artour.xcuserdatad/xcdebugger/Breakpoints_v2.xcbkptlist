@@ -14,8 +14,8 @@
             filePath = "WIN Journal/Services/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "oneOfZero(urlString:key:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,62 +23,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E71C22F4-0A44-4D73-9070-33952D799B35"
+            uuid = "45D89539-AB78-4D81-9F7D-D236E0583A2B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WIN Journal/Services/NetworkService.swift"
+            filePath = "WIN Journal/Services/RemoteConfigService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "isDateValid"
-            landmarkType = "24">
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "fetchRemoteConfig(shouldUpdateValues:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E71C22F4-0A44-4D73-9070-33952D799B35 - d27e9b16be2c87c0"
+                  uuid = "45D89539-AB78-4D81-9F7D-D236E0583A2B - 7a20b3b7a748654"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WIN_Journal.NetworkService.isDateValid.getter : Swift.Bool"
+                  symbolName = "WIN_Journal.RemoteConfigService.updateValues() -&gt; ()"
                   moduleName = "WIN Journal"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/NetworkService.swift"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/RemoteConfigService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "360">
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "168">
                </Location>
                <Location
-                  uuid = "E71C22F4-0A44-4D73-9070-33952D799B35 - d27e9b16be2c87c0"
+                  uuid = "45D89539-AB78-4D81-9F7D-D236E0583A2B - 165321afb5193f00"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WIN_Journal.NetworkService.isDateValid.getter : Swift.Bool"
+                  symbolName = "closure #1 (__C.FIRRemoteConfigFetchStatus, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WIN_Journal.RemoteConfigService.fetchRemoteConfig() -&gt; ()"
                   moduleName = "WIN Journal"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/NetworkService.swift"
+                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/RemoteConfigService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "416">
-               </Location>
-               <Location
-                  uuid = "E71C22F4-0A44-4D73-9070-33952D799B35 - d27e9b16be2c87c0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WIN_Journal.NetworkService.isDateValid.getter : Swift.Bool"
-                  moduleName = "WIN Journal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/artour/Documents/GitHub/384/WIN%20Journal/Services/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "408">
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "80">
                </Location>
             </Locations>
          </BreakpointContent>
